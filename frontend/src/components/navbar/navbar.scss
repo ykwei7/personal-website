@@ -1,11 +1,14 @@
+@import '../../globals.scss';
+
 .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: $col-spacing-unit;
     letter-spacing: 0.08rem;
-    padding-top: 2rem;
+    padding-top: $col-spacing-unit;
+    margin-bottom: $col-spacing-unit;
 
     .main {
         font-size: 1.3rem;
@@ -13,10 +16,20 @@
     }
 
     .tabs {
-        color: darkgray;
+        color: $secondary-color;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: $col-spacing-unit;
+
+        .tab:hover {
+            cursor: pointer;
+            color: $default-color;
+        }
+
+        .selected {
+            border-bottom: 1px solid $default-color;
+            color: $default-color;
+        }
     }
 }

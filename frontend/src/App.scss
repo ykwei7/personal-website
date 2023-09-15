@@ -1,5 +1,21 @@
+@import 'globals.scss';
+
 .app {
     padding-left: 20%;
     padding-right: 20%;
     color: black;
+    font-family: $body-font;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    width: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    width: 0;
 }

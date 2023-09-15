@@ -1,5 +1,35 @@
+@import '../../globals.scss';
+
 .home {
     display: flex;
-    margin-top: 2rem;
+    flex-direction: column;
+    color: $primary-color;
+    gap: $col-spacing-unit;
+    justify-content: center;
+    align-items: center;
 
+    .intro {
+        text-align: center;
+        line-height: 1.5rem;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: $row-spacing-unit;
+
+        >div {
+            text-align: center;
+
+            .title {
+                color: $primary-color;
+                letter-spacing: $letter-spacing-unit;
+                margin-bottom: $row-spacing-unit;
+            }
+
+            .skills-content {
+                color: $default-color;
+            }
+        }
+    }
 }
