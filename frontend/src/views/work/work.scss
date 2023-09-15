@@ -16,10 +16,15 @@
         width: 20rem;
 
         .work-list-item {
-            background-color: $tab-color;
             border-radius: .5rem;
             padding: 0.2rem 0.5rem;
             text-align: center;
+            color: $primary-color;
+            cursor: pointer;
+        }
+
+        .selected {
+            background-color: $tab-color;
         }
     }
 }
