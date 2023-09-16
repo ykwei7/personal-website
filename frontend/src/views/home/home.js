@@ -1,14 +1,7 @@
 import "./home.scss";
 
 export default function Home() {
-  const languages = [
-    "Python",
-    "Java",
-    "JavaScript",
-    "TypeScript",
-    "SQL",
-    "C++",
-  ];
+  const languages = ["Python", "Java", "JavaScript", "TypeScript", "SQL"];
   const frontend = ["ReactJS", "AngularJS", "VueJS", "Sass"];
   const backend = ["ExpressJS", "FastAPI", "GraphQL", "MongoDB", "PostgreSQL"];
   const frameworks = ["Docker", "Kubernetes", "Travis CI", "Redis", "Redux"];
@@ -18,10 +11,11 @@ export default function Home() {
   return (
     <div className="home">
       <div className="intro">
-        Hi! I'm Yangken, an aspiring software developer. To introduce myself, I
-        am an individual who loves to build ideas, and this is a big part of why
-        I chose this pathway. Beyond coding, I really enjoy sports and
-        activities like bungee-jumping, and hope to skydive one day :)
+        Hi! I'm Yangken, a final year Computer Science student. Since I started
+        programming, I really enjoyed the process of being able to build things
+        and this is a big part of why I hope to go into development in the
+        future. Beyond coding, I really enjoy sports and activities like
+        bungee-jumping, and hope to skydive one day :)
       </div>
       <div className="skills">
         <div className="lang">

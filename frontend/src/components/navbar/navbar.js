@@ -16,6 +16,7 @@ export default function Navbar({ currView, views, setView }) {
       <div className="tabs">
         {Object.keys(views).map((view) => (
           <div
+            key={`nav-${view}`}
             className={getClassName(view)}
             onClick={() => setView(views[view])}
           >

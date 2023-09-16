@@ -1,0 +1,30 @@
+@import '../../globals.scss';
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .preamble {
+        line-height: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $divider-color;
+    }
+
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .email {
+            cursor: pointer;
+        }
+
+        img {
+            width: 1rem;
+        }
+    }
+}

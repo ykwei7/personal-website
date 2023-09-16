@@ -4,12 +4,13 @@ import Project from "./views/project/project";
 import "./App.scss";
 import React, { useState } from "react";
 import Work from "./views/work/work";
+import About from "./views/about/about";
 
 function App() {
   const views = {
     HOME: "home",
     PROJECT: "project",
-    WORK: "work",
+    // WORK: "work",
     ABOUT: "about",
   };
 
@@ -21,6 +22,7 @@ function App() {
       {currView === views.HOME && <Home />}
       {currView === views.PROJECT && <Project />}
       {currView === views.WORK && <Work />}
+      {currView === views.ABOUT && <About />}
     </div>
   );
 }
