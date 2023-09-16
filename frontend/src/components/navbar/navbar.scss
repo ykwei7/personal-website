@@ -10,9 +10,14 @@
     padding-top: $col-spacing-unit;
     margin-bottom: $col-spacing-unit;
 
+    a {
+        text-decoration: none;
+    }
+
     .main {
         font-size: 1.3rem;
         font-weight: 500;
+        color: $default-color;
     }
 
     .tabs {

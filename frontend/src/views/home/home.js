@@ -18,11 +18,10 @@ export default function Home() {
   return (
     <div className="home">
       <div className="intro">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tortor
-        velit, mattis quis elit non, tincidunt auctor nisl. Curabitur volutpat
-        tempor luctus. Maecenas dolor arcu, tempor eget purus sed, eleifend
-        semper urna. Morbi commodo laoreet erat ut feugiat. Phasellus eu mi
-        rutrum, vulputate risus sed, dictum odio.
+        Hi! I'm Yangken, an aspiring software developer. To introduce myself, I
+        am an individual who loves to build ideas, and this is a big part of why
+        I chose this pathway. Beyond coding, I really enjoy sports and
+        activities like bungee-jumping, and hope to skydive one day :)
       </div>
       <div className="skills">
         <div className="lang">

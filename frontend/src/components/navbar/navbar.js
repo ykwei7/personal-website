@@ -6,7 +6,13 @@ export default function Navbar({ currView, views, setView }) {
   };
   return (
     <div className="navbar">
-      <div className="main">yangkenw</div>
+      <a
+        href="https://github.com/ykwei7"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <div className="main">yangkenw</div>
+      </a>
       <div className="tabs">
         {Object.keys(views).map((view) => (
           <div

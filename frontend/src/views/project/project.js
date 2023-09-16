@@ -1,38 +1,35 @@
 import ProjectCard from "../../components/project/projectCard";
-import StreakBotImage from "../../assets/Streakbot.png";
 import "./project.scss";
 import { useState } from "react";
+import { projects } from "../../data/data";
 
 export default function Project() {
-  const [currProj, setCurrProj] = useState("PeerPrep");
+  const [currProj, setCurrProj] = useState(projects.PeerPrep);
   const getClassName = (name) => {
-    return name === currProj
+    return name === currProj.name
       ? "project-list-item selected"
       : "project-list-item";
   };
-  const projects = [
-    "PeerPrep",
-    "StreakBot",
-    "Track-O",
-    "Sarcasm Detection",
-    "WenMoon Journey",
-    "HelpMeMahjong",
-  ];
   return (
     <div className="project">
-      <div>{"Here's a bunch of the projects I did the last few years :]"}</div>
+      <div>
+        {"Here's a bunch of projects I got to build the past few years :]"}
+      </div>
       <div className="project-list">
-        {projects.map((proj) => (
-          <div onClick={() => setCurrProj(proj)} className={getClassName(proj)}>
-            {proj}
+        {Object.keys(projects).map((proj) => (
+          <div
+            onClick={() => setCurrProj(projects[proj])}
+            className={getClassName(projects[proj].name)}
+          >
+            {projects[proj].name}
           </div>
         ))}
       </div>
       <div className="project-details">
         <ProjectCard
-          image={StreakBotImage}
-          projectName={"StreakBot"}
-          description={"description of project"}
+          image={currProj.image}
+          projectName={currProj.name}
+          description={currProj.description}
         />
       </div>
     </div>

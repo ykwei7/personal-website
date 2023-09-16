@@ -13,7 +13,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: $row-spacing-unit;
-        width: 30rem;
+        max-width: 30rem;
 
         .project-list-item {
             border-radius: .5rem;
