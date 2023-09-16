@@ -12,12 +12,13 @@ export default function Project() {
   };
   return (
     <div className="project">
-      <div>
-        {"Here's a bunch of projects I got to build the past few years :]"}
+      <div className="preamble">
+        Here are some of the projects I got to build the past few years :]
       </div>
       <div className="project-list">
         {Object.keys(projects).map((proj) => (
           <div
+            key={`proj-${proj}-1`}
             onClick={() => setCurrProj(projects[proj])}
             className={getClassName(projects[proj].name)}
           >
@@ -30,7 +31,20 @@ export default function Project() {
           image={currProj.image}
           projectName={currProj.name}
           description={currProj.description}
+          link={currProj.link}
+          technologies={currProj.technologies}
         />
+      </div>
+      <div className="project-list single-line">
+        {Object.keys(projects).map((proj) => (
+          <div
+            key={`proj-${proj}-2`}
+            onClick={() => setCurrProj(projects[proj])}
+            className={getClassName(projects[proj].name)}
+          >
+            {projects[proj].name}
+          </div>
+        ))}
       </div>
     </div>
   );

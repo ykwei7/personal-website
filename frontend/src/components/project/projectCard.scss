@@ -1,10 +1,25 @@
+@import '../../globals.scss';
+
 .project-card {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 
     .img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0.55;
+
         img {
-            width: 30rem;
+            border: 1px solid whitesmoke;
+            max-width: 40rem;
+            width: 100%;
+        }
+
+        img:hover {
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
         }
 
         transition: .5s all ease;
@@ -22,6 +37,27 @@
         box-shadow: none;
         filter: none;
         background: none;
-        cursor: pointer;
+    }
+
+    .proj-desc {
+        flex: 0.45;
+
+        .proj-name {
+            color: $primary-color;
+            letter-spacing: $letter-spacing-unit;
+        }
+
+        .proj-name:hover {
+            color: $default-color;
+        }
+
+        .tech {
+            color: $primary-color;
+            letter-spacing: $letter-spacing-unit;
+        }
+
+        .tech:hover {
+            color: $default-color;
+        }
     }
 }

@@ -6,6 +6,13 @@
     align-items: center;
     justify-content: center;
     gap: $col-spacing-unit;
+    padding-bottom: 2rem;
+
+    .preamble {
+        line-height: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $divider-color;
+    }
 
     .project-list {
         display: flex;
@@ -13,7 +20,7 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: $row-spacing-unit;
-        max-width: 30rem;
+        max-width: 20rem;
 
         .project-list-item {
             border-radius: .5rem;
@@ -23,8 +30,16 @@
             cursor: pointer;
         }
 
+        .project-list-item:hover {
+            color: $default-color;
+        }
+
         .selected {
             background-color: $tab-color;
         }
+    }
+
+    .project-list.single-line {
+        max-width: 40rem;
     }
 }
