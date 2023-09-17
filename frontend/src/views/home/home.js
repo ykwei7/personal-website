@@ -4,7 +4,15 @@ export default function Home() {
   const languages = ["Python", "Java", "JavaScript", "TypeScript", "SQL"];
   const frontend = ["ReactJS", "AngularJS", "VueJS", "Sass"];
   const backend = ["ExpressJS", "FastAPI", "GraphQL", "MongoDB", "PostgreSQL"];
-  const frameworks = ["Docker", "Kubernetes", "Travis CI", "Redis", "Redux"];
+  const frameworks = [
+    "Docker",
+    "Kubernetes",
+    "Travis CI",
+    "Redis",
+    "Redux",
+    "AWS EB",
+    "Google Cloud Platforms",
+  ];
   const joinArray = (arr) => {
     return arr.join(` ${"\u2022"} `);
   };
