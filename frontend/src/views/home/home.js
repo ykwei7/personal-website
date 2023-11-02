@@ -1,3 +1,4 @@
+import Preamble from "../../components/ui/Preamble";
 import "./home.scss";
 
 export default function Home() {
@@ -18,13 +19,13 @@ export default function Home() {
   };
   return (
     <div className="home">
-      <div className="intro">
+      <Preamble>
         Hi! I'm Yangken, a final year Computer Science student. Since I started
         programming, I really enjoyed the process of being able to build things
         and this is a big part of why I hope to go into development in the
         future. Beyond coding, I really enjoy sports and activities like
         bungee-jumping, and hope to skydive one day :)
-      </div>
+      </Preamble>
       <div className="skills">
         <div className="lang">
           <div className="title">Languages</div>

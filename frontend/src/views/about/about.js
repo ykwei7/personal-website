@@ -1,9 +1,10 @@
+import Preamble from "../../components/ui/Preamble";
 import "./about.scss";
 
 export default function About() {
   return (
     <div className="about">
-      <div className="preamble">Thanks for visiting!</div>
+      <Preamble>Thanks for visiting!</Preamble>
       <div className="footer">
         <a
           href="https://github.com/ykwei7"
