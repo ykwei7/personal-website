@@ -25,3 +25,8 @@
 ::-webkit-scrollbar-thumb {
   background-color: #888;
 }
+
+html,
+body {
+  scroll-behavior: smooth;
+}

@@ -31,6 +31,7 @@ export default function Project() {
         projects={projects}
         setCurrProj={setCurrProj}
         currProj={currProj}
+        scrollToProjStart={true}
       />
     </div>
   );
