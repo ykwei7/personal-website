@@ -1,28 +1,28 @@
 import Navbar from "./components/navbar/navbar";
 import Home from "./views/home/home";
 import Project from "./views/project/project";
-import "./App.scss";
-import React, { useState } from "react";
-import Work from "./views/work/work";
 import About from "./views/about/about";
+import "./App.scss";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const views = {
-    HOME: "home",
-    PROJECT: "project",
+    HOME: "/",
+    PROJECT: "/projects",
     // WORK: "work",
-    ABOUT: "about",
+    ABOUT: "/about",
   };
-
-  const [currView, setView] = useState(views.HOME);
 
   return (
     <div className="app">
-      <Navbar currView={currView} views={views} setView={setView} />
-      {currView === views.HOME && <Home />}
-      {currView === views.PROJECT && <Project />}
-      {currView === views.WORK && <Work />}
-      {currView === views.ABOUT && <About />}
+      <Navbar views={views} />
+      <Routes>
+        <Route path={views.HOME} element={<Home />}></Route>
+        <Route path={views.PROJECT} element={<Project />}>
+          <Route path=":projName" element={<Project />} />
+        </Route>
+        <Route path={views.ABOUT} element={<About />}></Route>
+      </Routes>
     </div>
   );
 }

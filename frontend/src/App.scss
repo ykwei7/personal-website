@@ -13,7 +13,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 /* Track (background) of the scrollbar */
@@ -29,4 +29,5 @@
 html,
 body {
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }

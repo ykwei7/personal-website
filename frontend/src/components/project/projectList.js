@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function ProjectList({ projects, setCurrProj, currProj, scrollToProjStart }) {
+function ProjectList({ projects, currProj, scrollToProjStart }) {
   const getClassName = (name) => {
     return name === currProj.name
       ? "project-list-item selected"
@@ -16,20 +17,21 @@ function ProjectList({ projects, setCurrProj, currProj, scrollToProjStart }) {
     }
   };
 
-  const handleProjClick = (proj) => {
-    setCurrProj(projects[proj]);
+  const handleProjClick = () => {
     goToProjectStart();
   };
+
   return (
     <div className="project-list">
       {Object.keys(projects).map((proj) => (
-        <div
-          key={`proj-${proj}`}
-          onClick={() => handleProjClick(proj)}
+        <Link
           className={getClassName(projects[proj].name)}
+          key={`proj-${proj}`}
+          onClick={handleProjClick}
+          to={`${projects[proj].name}`}
         >
           {projects[proj].name}
-        </div>
+        </Link>
       ))}
     </div>
   );

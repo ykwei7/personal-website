@@ -1,40 +1,44 @@
-@import '../../globals.scss';
+@import "../../globals.scss";
 
 .navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $col-spacing-unit;
+  letter-spacing: 0.08rem;
+  padding-top: $col-spacing-unit;
+  margin-bottom: $col-spacing-unit;
+
+  a {
+    text-decoration: none;
+  }
+
+  .main {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: $default-color;
+  }
+
+  .tabs {
+    color: $secondary-color;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: $col-spacing-unit;
-    letter-spacing: 0.08rem;
-    padding-top: $col-spacing-unit;
-    margin-bottom: $col-spacing-unit;
 
-    a {
-        text-decoration: none;
+    .link {
+      display: inline-block;
+      color: $primary-color;
     }
 
-    .main {
-        font-size: 1.3rem;
-        font-weight: 500;
-        color: $default-color;
+    .link:hover {
+      cursor: pointer;
+      color: $default-color;
     }
 
-    .tabs {
-        color: $secondary-color;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: $col-spacing-unit;
-
-        .tab:hover {
-            cursor: pointer;
-            color: $default-color;
-        }
-
-        .selected {
-            border-bottom: 1px solid $default-color;
-            color: $default-color;
-        }
+    .selected {
+      border-bottom: 1px solid $secondary-color;
     }
+  }
 }
