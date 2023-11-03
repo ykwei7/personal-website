@@ -1,6 +1,5 @@
 import ProjectCard from "../../components/project/projectCard";
 import "./project.scss";
-import { useState } from "react";
 import { projects } from "../../data/data";
 import Preamble from "../../components/ui/Preamble";
 import ProjectList from "../../components/project/projectList";
