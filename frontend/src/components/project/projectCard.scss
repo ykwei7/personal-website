@@ -1,63 +1,63 @@
-@import '../../globals.scss';
+@import "../../styles/globals.scss";
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  .img-container {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    flex: 0.55;
 
-    .img-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex: 0.55;
-
-        img {
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
-            border: 1px solid whitesmoke;
-            max-width: 40rem;
-            width: 100%;
-        }
-
-        img:hover {
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
-            cursor: pointer;
-        }
+    img {
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+      border: 1px solid whitesmoke;
+      max-width: 40rem;
+      width: 100%;
     }
 
-    .img-container {
-        content: '';
-        box-shadow: inset 0 0 10px rgba(255, 255, 255, .5);
-        filter: blur(2px) grayscale(90%);
-        background: inherit;
-        transition: 8s all ease;
+    img:hover {
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+    }
+  }
+
+  .img-container {
+    content: "";
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+    filter: blur(2px) grayscale(90%);
+    background: inherit;
+    transition: 8s all ease;
+  }
+
+  .img-container:hover {
+    box-shadow: none;
+    filter: none;
+    background: none;
+    transition: 0.5s all ease;
+  }
+
+  .proj-desc {
+    flex: 0.45;
+
+    .proj-name {
+      color: $primary-color;
+      letter-spacing: $letter-spacing-unit;
     }
 
-    .img-container:hover {
-        box-shadow: none;
-        filter: none;
-        background: none;
-        transition: .5s all ease;
+    .proj-name:hover {
+      color: $default-color;
     }
 
-    .proj-desc {
-        flex: 0.45;
-
-        .proj-name {
-            color: $primary-color;
-            letter-spacing: $letter-spacing-unit;
-        }
-
-        .proj-name:hover {
-            color: $default-color;
-        }
-
-        .tech {
-            color: $primary-color;
-            letter-spacing: $letter-spacing-unit;
-        }
-
-        .tech:hover {
-            color: $default-color;
-        }
+    .tech {
+      color: $primary-color;
+      letter-spacing: $letter-spacing-unit;
     }
+
+    .tech:hover {
+      color: $default-color;
+    }
+  }
 }

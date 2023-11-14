@@ -1,29 +1,42 @@
-@import "globals.scss";
+@import "styles/globals.scss";
 
 .app {
   display: block;
-  padding-top: 1%;
-  padding-bottom: 1%;
   padding-left: 20%;
   padding-right: 20%;
-  color: black;
   font-family: $body-font;
   overflow: scroll;
   overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.app-dark {
+  background-color: #121212;
+  color: white;
+}
+
+.app-light {
+  background-color: white;
+  color: black;
 }
 
 ::-webkit-scrollbar {
   width: 3px;
 }
 
-/* Track (background) of the scrollbar */
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1;
+  width: 0px;
+}
+
+.app-dark::-webkit-scrollbar-track {
+  background-color: #121212;
 }
 
 /* Handle (thumb) of the scrollbar */
 ::-webkit-scrollbar-thumb {
   background-color: #888;
+  width: 0px;
 }
 
 html,

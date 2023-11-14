@@ -1,37 +1,37 @@
-@import '../../globals.scss';
+@import "../../styles/globals.scss";
 
 .home {
+  display: flex;
+  flex-direction: column;
+  color: $primary-color;
+  gap: $col-spacing-unit;
+  justify-content: center;
+  align-items: center;
+
+  .intro {
+    text-align: center;
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $divider-color;
+  }
+
+  .skills {
     display: flex;
     flex-direction: column;
-    color: $primary-color;
-    gap: $col-spacing-unit;
-    justify-content: center;
-    align-items: center;
+    gap: $row-spacing-unit;
 
-    .intro {
-        text-align: center;
-        line-height: 1.5rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid $divider-color;
+    > div {
+      text-align: center;
+
+      .title {
+        color: $primary-color;
+        letter-spacing: $letter-spacing-unit;
+        margin-bottom: $row-spacing-unit;
+      }
+
+      .skills-content {
+        color: $default-color;
+      }
     }
-
-    .skills {
-        display: flex;
-        flex-direction: column;
-        gap: $row-spacing-unit;
-
-        >div {
-            text-align: center;
-
-            .title {
-                color: $primary-color;
-                letter-spacing: $letter-spacing-unit;
-                margin-bottom: $row-spacing-unit;
-            }
-
-            .skills-content {
-                color: $default-color;
-            }
-        }
-    }
+  }
 }

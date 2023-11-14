@@ -4,8 +4,15 @@ import Project from "./views/project/project";
 import About from "./views/about/about";
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
+import { useTheme } from "./context/themeContext";
 
 function App() {
+  const { isDarkMode, toggleTheme } = useTheme();
+
+  const getThemeClass = () => {
+    return isDarkMode ? "app-dark app" : "app-light app";
+  };
+
   const views = {
     HOME: "/",
     PROJECT: "/projects",
@@ -14,7 +21,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className={getThemeClass()}>
       <Navbar views={views} />
       <Routes>
         <Route path={views.HOME} element={<Home />}></Route>
