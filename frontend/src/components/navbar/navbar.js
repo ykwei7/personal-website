@@ -12,7 +12,7 @@ export default function Navbar({ views }) {
   return (
     <div className="navbar">
       <a
-        href="https://github.com/ykwei7"
+        href="https://github.com/ykwei7/personal-website/tree/main/frontend"
         rel="noopener noreferrer"
         target="_blank"
       >
